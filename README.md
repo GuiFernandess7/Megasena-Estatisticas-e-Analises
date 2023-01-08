@@ -3,6 +3,14 @@
 No site da caixa (https://asloterias.com.br/download-todos-resultados-mega-sena), é possível fazer download da planilha de todos os jogos da megasena que já ocorreram. 
 Nesse programa eu utilizo a biblioteca Numpy para criar uma matriz com base na planilha.
 
+Requisitos:
+----------
+
+Numpy:
+```
+pip install numpy
+```
+
 Etapas de Desenvolvimento:
 ---------------------------
 1. Capturar dados da planilha e convertê-los em uma matrix
@@ -11,7 +19,7 @@ Etapas de Desenvolvimento:
 4. Comparar as sequências criadas aos jogos da tabela
 5. Caso a sequência gerada não esteja na matriz, a sequência é mostrada. Caso contrário, é gerada uma nova sequência
 
-Funcionalidades:
+Algumas das funcionalidades:
 -----------------
 
 Visualizar o número de repetições de determinado bola em determinada coluna para todos os jogos que já aconteceram:
