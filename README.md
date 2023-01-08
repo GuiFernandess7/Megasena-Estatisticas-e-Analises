@@ -75,6 +75,19 @@ No dicionário abaixo, as primeiras chaves correspondentes à posição da bola.
 Gráficos:
 --------
 
+#### Número de Casas X Frequência
 
 
+![bola1](https://user-images.githubusercontent.com/63022500/211217615-03079949-bd45-438f-be67-f444c0fb7e10.jpg)
 
+
+![bola2](https://user-images.githubusercontent.com/63022500/211217619-d607e2d7-5931-48b1-a035-960d80d2aa49.jpg)
+
+
+![bola3](https://user-images.githubusercontent.com/63022500/211217622-7df9c1b3-02c3-4faf-bad7-83c13f05f66e.jpg)
+
+![bola4](https://user-images.githubusercontent.com/63022500/211217624-f04fd27e-f4de-4f79-b9d5-0e83f151c22d.jpg)
+
+![bola5](https://user-images.githubusercontent.com/63022500/211217630-66cfb79a-72d0-478d-8cc5-3d6e81fbe37d.jpg)
+
+![bola6](https://user-images.githubusercontent.com/63022500/211217635-7373f250-9dac-45ea-85a1-72976ab10781.jpg)
