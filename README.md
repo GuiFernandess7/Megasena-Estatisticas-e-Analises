@@ -49,3 +49,26 @@ def most_commom_numbers_by_column(matriz, number_range: int, column=0):
         bola_dict[f"Bola {column + 1}"] = filtered_values
         return bola_dict
 ```
+
+jogos.json:
+----------
+No dicionário abaixo, as primeiras chaves correspondentes à posição da bola. As segundas chaves correspondem ao número da bola e os valores à quantidade de repetições.
+```
+{
+   "1": {
+      "1": 249,
+      "2": 236,
+      "4": 215,
+      "3": 197,
+      "5": 185
+   },
+   "2": {
+      "16": 128,
+      "13": 125,
+      "10": 121,
+      "11": 113,
+      "18": 106
+   },
+   ...
+```
+
