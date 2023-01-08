@@ -91,3 +91,8 @@ Gráficos:
 ![bola5](https://user-images.githubusercontent.com/63022500/211217630-66cfb79a-72d0-478d-8cc5-3d6e81fbe37d.jpg)
 
 ![bola6](https://user-images.githubusercontent.com/63022500/211217635-7373f250-9dac-45ea-85a1-72976ab10781.jpg)
+
+#### Geral: Frequência de todas as bolas, independente da posição
+
+![geral](https://user-images.githubusercontent.com/63022500/211217704-31e3d24b-8b28-4e17-8f98-5bb54d3f1af1.jpg)
+
