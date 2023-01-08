@@ -15,23 +15,29 @@ Funcionalidades:
 -----------------
 
 Visualizar o número de repetições de determinado bola em determinada coluna para todos os jogos que já aconteceram:
-
 ```
 def get_repetition_by_column(matriz, column_index: int, number: int):
-        """Retorna o número de repetições de determinado número em determinada coluna
-        Parâmetros: Os dados, número da bola (```column_index```) e o valor da bola (```number```)"""
-
         repetitions = np.count_nonzero(matriz[:, column_index] == number)
         return repetitions
 ```
 
 Receber um ```array``` em que cada coluna corresponde ao número de repetições de determinado número
-
 ```
 def get_repetitions_by_number(matriz, number):
-        """Retorna um ```array``` em que cada coluna corresponde ao número de repetições de determinado
-        número (```number```)"""
-
         repetitions = np.sum(np.equal(matriz, number), axis=0)
         return repetitions
+```
+
+Retornar uma lista de tuplas: (numero da bola: repetição desse número nos jogos anteriores)
+```
+def most_commom_numbers_by_column(matriz, number_range: int, column=0):
+        """Retorna uma lista de tuplas: [(numero da bola: repetição desse número nos jogos anteriores)]
+        Parâmetros: Os dados , a coluna (column) e a quantidade de tuplas"""
+
+        bola_dict = {}
+        numbers, repetitions = np.unique(matriz[:, column], return_counts=True)
+        values = dict(zip(numbers, repetitions))
+        filtered_values = Counter(values).most_common(number_range)
+        bola_dict[f"Bola {column + 1}"] = filtered_values
+        return bola_dict
 ```
