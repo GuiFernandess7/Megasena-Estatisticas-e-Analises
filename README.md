@@ -72,3 +72,9 @@ No dicionário abaixo, as primeiras chaves correspondentes à posição da bola.
    ...
 ```
 
+Gráficos:
+--------
+
+
+
+
