@@ -1,7 +1,7 @@
 # Megasena - Estatísticas e Análises
 
 No site da caixa (https://asloterias.com.br/download-todos-resultados-mega-sena), é possível fazer download da planilha de todos os jogos da megasena que já ocorreram. 
-Nesse programa eu utilizo a biblioteca Numpy para criar uma matriz com base na planilha. Esse programa permite consultar o número de repetições de determinada bola em uma determinada posição de todos os jogos que já ocorreram e gerar novas sequências baseadas nos números que mais apareceram.
+Nesse programa eu utilizo a biblioteca Numpy para criar uma matriz com base na planilha. Esse programa permite consultar o número de repetições de determinada bola em uma determinada posição levando em consideração todos os jogos e gerar novas sequências baseadas nos números que mais apareceram.
 
 Requisitos:
 ----------
