@@ -11,7 +11,7 @@ Nesse programa eu utilizo a biblioteca Numpy para criar uma matriz com base na p
 4. Comparar as sequências criadas aos jogos da tabela
 5. Caso a sequência gerada não esteja na matriz, a sequência é mostrada. Caso contrário, é gerada uma nova sequência
 
-**Funcionalidades:
+*Funcionalidades:
 -----------------
 
 Visualizar o número de repetições de determinado bola em determinada coluna para todos os jogos que já aconteceram:
