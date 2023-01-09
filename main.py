@@ -20,7 +20,7 @@ def app():
         return repetitions
 
     def most_commom_numbers_by_column(matriz, number_range: int, column=0):
-        """Retorna uma lista de tuplas: [(numero da bola: repetição desse número nos jogos anteriores)]
+        """Retorna uma lista de tuplas: [(numero da bola, repetição desse número nos jogos anteriores)]
         Parâmetros: Os dados , a coluna (column) e a quantidade de tuplas"""
 
         bola_dict = {}
@@ -30,7 +30,7 @@ def app():
         bola_dict[f"Bola {column + 1}"] = filtered_values
         return bola_dict
 
-    def get_most_repeted_numbers(matriz, frequency=5, export_data=False):
+    def get_most_repeated_numbers(matriz, frequency=5, export_data=False):
         """Retorna um dicionário com os valores das bola e o número de repetições referentes a cada bola
         Parâmetros: Os dados, as 5 bolas que possuem mais repetições, e a opção de exportar os dados em um arquivo json"""
 
@@ -57,7 +57,7 @@ def app():
     def generate_sequences(matriz, number_range=None):
         """Cria sequências (lista) com base nos dados gerados com os números que mais aparecem"""
 
-        frequencies = get_most_repeted_numbers(matriz, number_range)
+        frequencies = get_most_repeated_numbers(matriz, number_range)
         keys = [list(valores.keys()) for _, valores in frequencies.items()]
         keys = np.array(keys)
         indices = np.random.randint(0, keys.shape[1], size=keys.shape[0])
@@ -72,11 +72,40 @@ def app():
     # Wrapper function
     def main():
         data = load_data("../megasena-results.xlsx")
-        seq = int(input("Quantas sequências deseja gerar? "))
-        for s in range(0, seq):
-            new_sequence = generate_sequences(data, 5)
-            response = f"{s} - {new_sequence}"
-            print(response)
+        num_rows, num_cols = data.shape
+        menu = int(input("""O que deseja fazer?
+        [1] - Acessar quantas vezes um número se repetiu (acesso por bola)
+        [2] - Acessar quantas vezes um número se repetiu em cada uma das bolas
+        [3] - Acessar os números que mais se repetiram em determinada bola
+        [4] - Gerar uma sequência
+        """))
+        if menu == 1:
+            numero = int(input("Selecione um valor para a bola (1 a 60): "))
+            bola = int(input("Seleciona uma posição da bola (1 a 6): "))
+            if bola > 6:
+                print("Número Inválido")
+                time.sleep(2)
+                main()
+            else:
+                resultado = get_repetition_by_column(data, bola, numero)
+                print(f"Houveram {resultado} repetições do número {numero} na posição {bola} nos últimos {num_rows} jogos")
+        if menu == 2:
+            numero = int(input("Selecione um valor para a bola (1 a 60): "))
+            result = get_repetitions_by_number(data, numero)
+            print(f"Lista de repetições do número {numero} por posição: {result}")
+        if menu == 3:
+            bola = int(input("Seleciona uma posição da bola (1 a 6): "))
+            bola -= 1
+            repeticoes = int(input("Número máximo de repetições: "))
+            result = most_commom_numbers_by_column(data, repeticoes, bola)
+            resultados = [r for r in result.values()]
+            print(resultados)
+        if menu == 4:
+            seq = int(input("Quantas sequências deseja gerar? "))
+            for s in range(0, seq):
+                new_sequence = generate_sequences(data, 5)
+                response = f"{s} - {new_sequence}"
+                print(response)
         input(" ")
     
     main()
