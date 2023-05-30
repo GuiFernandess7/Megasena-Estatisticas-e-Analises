@@ -13,7 +13,7 @@ pip install numpy
 
 Etapas de Desenvolvimento:
 ---------------------------
-1. Capturar dados da planilha e convertê-los em uma matrix
+1. Capturar dados da planilha e convertê-los em uma matriz
 2. Filtrar valores que mais se repetem baseados em repetições máximas e mínimas para cada coluna
 3. Criar novas sequências baseadas nesses filtros
 4. Comparar as sequências criadas aos jogos da tabela
