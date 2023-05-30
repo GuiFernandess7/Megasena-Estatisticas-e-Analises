@@ -72,7 +72,7 @@ No dicionário abaixo, as primeiras chaves correspondentes à posição da bola.
    ...
 ```
 
-Gráficos:
+Gráficos Gerados:
 --------
 
 #### Número de Casas X Frequência
